@@ -13,13 +13,11 @@
     },
     "content_scripts": [
         {
+            "matches": ["*://*.youtube.com/*"],
             "js": [
                 "content-script.js"
             ],
-            "matches": [
-                "https://*.youtube.com/*"
-            ],
-            "run_at": "document_end"
+            "run_at": "document_idle"
         }
     ],
     "permissions": [
