@@ -10,5 +10,24 @@
     "background": {
         "service_worker": "service-worker.js",
         "type": "module"
-    }
+    },
+    "content_scripts": [
+        {
+            "js": [
+                "content-script.js"
+            ],
+            "matches": [
+                "https://*.youtube.com/*"
+            ],
+            "run_at": "document_end"
+        }
+    ],
+    "permissions": [
+        "tabs",
+        "storage",
+        "activeTab",
+        "bookmarks",
+        "alarms",
+        "notifications"
+    ]
 }
